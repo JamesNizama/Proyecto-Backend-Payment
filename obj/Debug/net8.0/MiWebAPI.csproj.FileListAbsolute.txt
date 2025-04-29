@@ -79,3 +79,4 @@ C:\Users\AACG\Downloads\Front\.NET-main\MiWebAPI\obj\Debug\net8.0\refint\MiWebAP
 C:\Users\AACG\Downloads\Front\.NET-main\MiWebAPI\obj\Debug\net8.0\MiWebAPI.pdb
 C:\Users\AACG\Downloads\Front\.NET-main\MiWebAPI\obj\Debug\net8.0\MiWebAPI.genruntimeconfig.cache
 C:\Users\AACG\Downloads\Front\.NET-main\MiWebAPI\obj\Debug\net8.0\ref\MiWebAPI.dll
+C:\Users\AACG\Downloads\Front\.NET-main\MiWebAPI\obj\Debug\net8.0\MiWebAPI.sourcelink.json
