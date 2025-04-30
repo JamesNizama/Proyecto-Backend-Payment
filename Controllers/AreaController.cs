@@ -48,7 +48,7 @@ namespace MiWebAPI.Controllers
             return result ? Ok(new { mensaje = "Area registrada" }) : BadRequest();
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Actualizar([FromBody] Area area)
         {
             var result = await _areaData.ActualizarArea(area);

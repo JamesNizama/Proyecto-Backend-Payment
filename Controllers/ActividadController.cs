@@ -48,7 +48,7 @@ namespace MiWebAPI.Controllers
             return result ? Ok(new { mensaje = "Empresa registrada" }) : BadRequest();
         }
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Actualizar([FromBody] Actividad actividad)
         {
             var result = await _actividadData.ActualizarActividad(actividad);

@@ -28,7 +28,7 @@
   {
     "ContainingType": "MiWebAPI.Controllers.ActividadController",
     "Method": "Actualizar",
-    "RelativePath": "api/Actividad",
+    "RelativePath": "api/Actividad/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -36,6 +36,11 @@
       {
         "Name": "actividad",
         "Type": "MiWebAPI.Models.Actividad",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -118,7 +123,7 @@
   {
     "ContainingType": "MiWebAPI.Controllers.AreaController",
     "Method": "Actualizar",
-    "RelativePath": "api/Area",
+    "RelativePath": "api/Area/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -126,6 +131,11 @@
       {
         "Name": "area",
         "Type": "MiWebAPI.Models.Area",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -180,6 +190,101 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MiWebAPI.Controllers.DocumentoController",
+    "Method": "Lista",
+    "RelativePath": "api/Documento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.DocumentoController",
+    "Method": "Crear",
+    "RelativePath": "api/Documento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documento",
+        "Type": "MiWebAPI.Models.Documento",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.DocumentoController",
+    "Method": "Actualizar",
+    "RelativePath": "api/Documento/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "documento",
+        "Type": "MiWebAPI.Models.Documento",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.DocumentoController",
+    "Method": "Eliminar",
+    "RelativePath": "api/Documento/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Byte",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.DocumentoController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/Documento/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.DocumentoController",
+    "Method": "ObtenerPorTitulo",
+    "RelativePath": "api/Documento/titulo/{titulo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "titulo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MiWebAPI.Controllers.EmpresaController",
     "Method": "Lista",
     "RelativePath": "api/Empresa",
@@ -208,7 +313,7 @@
   {
     "ContainingType": "MiWebAPI.Controllers.EmpresaController",
     "Method": "Actualizar",
-    "RelativePath": "api/Empresa",
+    "RelativePath": "api/Empresa/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -216,6 +321,11 @@
       {
         "Name": "empresa",
         "Type": "MiWebAPI.Models.Empresa",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -357,6 +467,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.VistaActividadesPendientesController",
+    "Method": "Lista",
+    "RelativePath": "api/VistaActividadesPendientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

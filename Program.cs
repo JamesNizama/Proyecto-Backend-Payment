@@ -11,9 +11,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<EmpresaData>();
 builder.Services.AddSingleton<VistaActividadUsuarioData>();
+builder.Services.AddSingleton<VistaActividadPendienteData>();
 builder.Services.AddSingleton<ActividadData>();
 builder.Services.AddSingleton<UsuarioData>();
 builder.Services.AddSingleton<AreaData>();
+builder.Services.AddSingleton<DocumentoData>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("NuevaPolitica", app =>

@@ -53,7 +53,7 @@ namespace MiWebAPI.Controllers
         }
 
         // PUT: api/empresa
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Actualizar([FromBody] Empresa empresa)
         {
             var result = await _empresaData.ActualizarEmpresa(empresa);
