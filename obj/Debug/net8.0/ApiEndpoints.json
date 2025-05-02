@@ -380,6 +380,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MiWebAPI.Controllers.ProyectoController",
+    "Method": "Lista",
+    "RelativePath": "api/Proyecto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.ProyectoController",
+    "Method": "Crear",
+    "RelativePath": "api/Proyecto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proyecto",
+        "Type": "MiWebAPI.Models.Proyecto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MiWebAPI.Controllers.UsuarioController",
     "Method": "Lista",
     "RelativePath": "api/Usuario",

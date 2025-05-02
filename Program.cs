@@ -16,6 +16,8 @@ builder.Services.AddSingleton<ActividadData>();
 builder.Services.AddSingleton<UsuarioData>();
 builder.Services.AddSingleton<AreaData>();
 builder.Services.AddSingleton<DocumentoData>();
+builder.Services.AddScoped<ProyectoData>();
+builder.Services.AddScoped<ItemsProyectoData>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("NuevaPolitica", app =>

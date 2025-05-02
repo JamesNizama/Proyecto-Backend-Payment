@@ -45,11 +45,11 @@ namespace MiWebAPI.Controllers
         public async Task<IActionResult> Crear([FromBody] Actividad actividad)
         {
             var result = await _actividadData.AgregarActividad(actividad);
-            return result ? Ok(new { mensaje = "Empresa registrada" }) : BadRequest();
+            return result ? Ok(new { mensaje = "Actividad registrada" }) : BadRequest();
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Actualizar([FromBody] Actividad actividad)
+        public async Task<IActionResult> Actualizar( [FromBody] Actividad actividad)
         {
             var result = await _actividadData.ActualizarActividad(actividad);
             return result ? Ok(new { mensaje = "Actividad actualizada" }) : NotFound();
