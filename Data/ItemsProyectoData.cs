@@ -47,6 +47,37 @@ namespace MiWebAPI.Data
             return listaItems;
         }
 
+        public async Task<List<ItemProyecto>> ListaItemsProyecto(int id)
+        {
+            var items = new List<ItemProyecto>();
+
+            using (var conex = new SqlConnection(conexion))
+            {
+                await conex.OpenAsync();
+                SqlCommand cmd = new SqlCommand("sp_Listar_items_proyecto_por_id", conex);
+                cmd.Parameters.AddWithValue("@ID_PROYECTO", id);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        items.Add(new ItemProyecto
+                        {
+                            id_items = reader.GetInt32(reader.GetOrdinal("ID_ITEMS")),
+                            id_proyecto = reader.GetInt32(reader.GetOrdinal("ID_PROYECTO")),
+                            descripcion = reader.IsDBNull(reader.GetOrdinal("descripcion")) ? null : reader.GetString(reader.GetOrdinal("descripcion")),
+                            estado = reader.GetString(reader.GetOrdinal("estado")),
+                            fecha_creacion = reader.GetDateTime(reader.GetOrdinal("fecha_creacion"))
+                        });
+                    }
+                }
+            }
+
+            return items;
+        }
+
+
         // Método para agregar un ítem de proyecto
         public async Task<int> AgregarItemProyecto(ItemProyecto itemProyecto)
         {

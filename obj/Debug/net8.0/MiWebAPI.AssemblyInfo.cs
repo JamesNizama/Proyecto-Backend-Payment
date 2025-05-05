@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiWebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd2a5b5e8759235f0314c415290a2abe5ba53610")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+021a524e045d285fe9c553407a922753de7665bc")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiWebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiWebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

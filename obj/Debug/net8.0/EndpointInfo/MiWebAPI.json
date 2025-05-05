@@ -597,6 +597,70 @@
         }
       }
     },
+    "/api/ItemsProyecto": {
+      "get": {
+        "tags": [
+          "ItemsProyecto"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ItemsProyecto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemProyecto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemProyecto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemProyecto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ItemsProyecto/id/{id}": {
+      "get": {
+        "tags": [
+          "ItemsProyecto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Proyecto": {
       "get": {
         "tags": [
@@ -962,6 +1026,32 @@
           "estado": {
             "type": "boolean",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemProyecto": {
+        "type": "object",
+        "properties": {
+          "id_items": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_proyecto": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha_creacion": {
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false

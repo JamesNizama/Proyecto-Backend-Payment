@@ -380,6 +380,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MiWebAPI.Controllers.ItemsProyectoController",
+    "Method": "Lista",
+    "RelativePath": "api/ItemsProyecto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.ItemsProyectoController",
+    "Method": "Crear",
+    "RelativePath": "api/ItemsProyecto",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemProyecto",
+        "Type": "MiWebAPI.Models.ItemProyecto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.ItemsProyectoController",
+    "Method": "ObtenerPorId",
+    "RelativePath": "api/ItemsProyecto/id/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MiWebAPI.Controllers.ProyectoController",
     "Method": "Lista",
     "RelativePath": "api/Proyecto",
