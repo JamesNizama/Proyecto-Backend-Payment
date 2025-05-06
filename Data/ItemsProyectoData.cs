@@ -15,6 +15,7 @@ namespace MiWebAPI.Data
         }
 
         // Método para obtener todos los ítems del proyecto
+
         public async Task<List<ItemProyecto>> ListaItemsProyecto()
         {
             List<ItemProyecto> listaItems = new List<ItemProyecto>();
@@ -46,6 +47,7 @@ namespace MiWebAPI.Data
 
             return listaItems;
         }
+
 
         public async Task<List<ItemProyecto>> ListaItemsProyecto(int id)
         {
@@ -79,6 +81,7 @@ namespace MiWebAPI.Data
 
 
         // Método para agregar un ítem de proyecto
+        // quiero llamar el ultimo idproyecto
         public async Task<int> AgregarItemProyecto(ItemProyecto itemProyecto)
         {
             try
@@ -112,5 +115,9 @@ namespace MiWebAPI.Data
                 throw new Exception("Error general al insertar el ítem del proyecto.", ex);
             }
         }
+
+
+
+
     }
 }
