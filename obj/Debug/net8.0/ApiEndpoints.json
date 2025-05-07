@@ -407,6 +407,22 @@
   },
   {
     "ContainingType": "MiWebAPI.Controllers.ItemsProyectoController",
+    "Method": "ActualizarItems",
+    "RelativePath": "api/ItemsProyecto",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MiWebAPI.DTO.ActualizarItemDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.ItemsProyectoController",
     "Method": "EliminarItemsProyecto",
     "RelativePath": "api/ItemsProyecto/{id}",
     "HttpMethod": "DELETE",

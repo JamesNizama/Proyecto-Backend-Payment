@@ -636,6 +636,35 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "ItemsProyecto"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarItemDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarItemDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarItemDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/ItemsProyecto/id/{id}": {
@@ -959,6 +988,24 @@
             "nullable": true
           },
           "estado": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActualizarItemDto": {
+        "type": "object",
+        "properties": {
+          "iD_PROYECTO": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "iD_ITEMS": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nuevoEstado": {
             "type": "string",
             "nullable": true
           }
