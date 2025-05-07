@@ -55,5 +55,19 @@ namespace MiWebAPI.Controllers
             }
         }
 
+        //[HttpPut]
+        //public async Task<IActionResult> ActualizarItems([FromBody] Usuarios usuarios)
+        //{
+        //    var result = await _itemsProyectoData.UpdateItemsProyectoId(usuarios);
+        //    return result ? Ok(new { mensaje = "Items actualizada" }) : NotFound();
+        //}
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> EliminarItemsProyecto(byte id)
+        {
+            var result = await _itemsProyectoData.EliminarItemsProyecto(id);
+            return result ? Ok(new { mensaje = "ItemsProyecto eliminado" }) : NotFound();
+        }
+
     }
 }

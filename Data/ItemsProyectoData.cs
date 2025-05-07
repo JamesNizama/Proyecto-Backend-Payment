@@ -117,6 +117,37 @@ namespace MiWebAPI.Data
         }
 
 
+        public async Task<bool> EliminarItemsProyecto(byte idItems)
+        {
+            using (var conex = new SqlConnection(conexion))
+            {
+                await conex.OpenAsync();
+                SqlCommand cmd = new SqlCommand("sp_Eliminar_ItemsProyecto", conex);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ID_PROYECTO", idItems);
+
+                int filasAfectadas = await cmd.ExecuteNonQueryAsync();
+                return filasAfectadas > 0;
+            }
+        }
+
+        public async Task<bool> UpdateItemsProyectoId(byte idProyecto, byte idItems, string estado)
+        {
+            using (var conex = new SqlConnection(conexion))
+            {
+                await conex.OpenAsync();
+                SqlCommand cmd = new SqlCommand("sp_Actualizar_Estado_ItemsProyecto", conex);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@ID_PROYECTO", idProyecto);
+                cmd.Parameters.AddWithValue("@ID_ITEMS", idItems);
+                cmd.Parameters.AddWithValue("@NuevoEstado", estado);
+
+                int filasAfectadas = await cmd.ExecuteNonQueryAsync();
+                return filasAfectadas > 0;
+            }
+        }
 
 
     }

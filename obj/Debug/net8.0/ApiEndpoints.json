@@ -407,6 +407,22 @@
   },
   {
     "ContainingType": "MiWebAPI.Controllers.ItemsProyectoController",
+    "Method": "EliminarItemsProyecto",
+    "RelativePath": "api/ItemsProyecto/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Byte",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MiWebAPI.Controllers.ItemsProyectoController",
     "Method": "ObtenerPorId",
     "RelativePath": "api/ItemsProyecto/id/{id}",
     "HttpMethod": "GET",
