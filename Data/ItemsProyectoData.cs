@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using MiWebAPI.DTO;
 using MiWebAPI.Models;
 using System.Data;
 
@@ -132,7 +133,7 @@ namespace MiWebAPI.Data
             }
         }
 
-        public async Task<bool> UpdateItemsProyectoId(byte idProyecto, byte idItems, string estado)
+        public async Task<bool> UpdateItemsProyectoId(ActualizarItemDto dto)
         {
             using (var conex = new SqlConnection(conexion))
             {
@@ -140,9 +141,9 @@ namespace MiWebAPI.Data
                 SqlCommand cmd = new SqlCommand("sp_Actualizar_Estado_ItemsProyecto", conex);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@ID_PROYECTO", idProyecto);
-                cmd.Parameters.AddWithValue("@ID_ITEMS", idItems);
-                cmd.Parameters.AddWithValue("@NuevoEstado", estado);
+                cmd.Parameters.AddWithValue("@ID_PROYECTO", dto.ID_PROYECTO);
+                cmd.Parameters.AddWithValue("@ID_ITEMS", dto.ID_ITEMS);
+                cmd.Parameters.AddWithValue("@NuevoEstado", dto.NuevoEstado);
 
                 int filasAfectadas = await cmd.ExecuteNonQueryAsync();
                 return filasAfectadas > 0;

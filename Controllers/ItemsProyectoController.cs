@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MiWebAPI.Data;
+using MiWebAPI.DTO;
 using MiWebAPI.Models;
 
 namespace MiWebAPI.Controllers
@@ -55,12 +56,13 @@ namespace MiWebAPI.Controllers
             }
         }
 
-        //[HttpPut]
-        //public async Task<IActionResult> ActualizarItems([FromBody] Usuarios usuarios)
-        //{
-        //    var result = await _itemsProyectoData.UpdateItemsProyectoId(usuarios);
-        //    return result ? Ok(new { mensaje = "Items actualizada" }) : NotFound();
-        //}
+        [HttpPut]
+        public async Task<IActionResult> ActualizarItems([FromBody] ActualizarItemDto dto)
+        {
+            var result = await _itemsProyectoData.UpdateItemsProyectoId(dto);
+            return result ? Ok(new { mensaje = "Ítem actualizado correctamente" }) : NotFound();
+        }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> EliminarItemsProyecto(byte id)
