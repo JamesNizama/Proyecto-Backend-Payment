@@ -480,6 +480,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "MiWebAPI.Controllers.ProyectoController",
+    "Method": "Actualizar",
+    "RelativePath": "api/Proyecto",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proyecto",
+        "Type": "MiWebAPI.Models.Proyecto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MiWebAPI.Controllers.UsuarioController",
     "Method": "Lista",
     "RelativePath": "api/Usuario",

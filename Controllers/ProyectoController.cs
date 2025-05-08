@@ -44,5 +44,13 @@ namespace MiWebAPI.Controllers
             }
         }
 
+
+        [HttpPut]
+        public async Task<IActionResult> Actualizar([FromBody] Proyecto proyecto)
+        {
+            var result = await _proyectoData.ActualizarProyecto(proyecto);
+            return result ? Ok(new { mensaje = "Proyecto actualizado" }) : NotFound();
+        }
+
     }
 }
