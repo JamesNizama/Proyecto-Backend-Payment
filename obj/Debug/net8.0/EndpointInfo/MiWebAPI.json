@@ -752,10 +752,22 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/api/Proyecto/{id}": {
       "put": {
         "tags": [
           "Proyecto"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
         ],
         "requestBody": {
           "content": {

@@ -45,7 +45,7 @@ namespace MiWebAPI.Controllers
         }
 
 
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Actualizar([FromBody] Proyecto proyecto)
         {
             var result = await _proyectoData.ActualizarProyecto(proyecto);

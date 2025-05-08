@@ -482,7 +482,7 @@
   {
     "ContainingType": "MiWebAPI.Controllers.ProyectoController",
     "Method": "Actualizar",
-    "RelativePath": "api/Proyecto",
+    "RelativePath": "api/Proyecto/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -490,6 +490,11 @@
       {
         "Name": "proyecto",
         "Type": "MiWebAPI.Models.Proyecto",
+        "IsRequired": true
+      },
+      {
+        "Name": "id",
+        "Type": "",
         "IsRequired": true
       }
     ],
