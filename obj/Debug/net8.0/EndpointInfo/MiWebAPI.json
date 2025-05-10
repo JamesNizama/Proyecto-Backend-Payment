@@ -1252,6 +1252,14 @@
           "estado": {
             "type": "boolean",
             "nullable": true
+          },
+          "user": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

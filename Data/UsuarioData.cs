@@ -41,7 +41,14 @@ namespace MiWebAPI.Data
                                 id_area = reader.GetByte(reader.GetOrdinal("ID_Area")),
                                 estado = reader.IsDBNull(reader.GetOrdinal("Estado"))
                                          ? null
-                                         : reader.GetBoolean(reader.GetOrdinal("Estado"))
+                                         : reader.GetBoolean(reader.GetOrdinal("Estado")),
+                                // Manejo de valores nulos en 'user' y 'password'
+                                user = reader.IsDBNull(reader.GetOrdinal("user"))
+                                 ? null // O un valor predeterminado si lo prefieres
+                                 : reader.GetString(reader.GetOrdinal("user")),
+                                password = reader.IsDBNull(reader.GetOrdinal("password"))
+                                 ? null // O un valor predeterminado si lo prefieres
+                                 : reader.GetString(reader.GetOrdinal("password")),
                             });
                         }
                     }

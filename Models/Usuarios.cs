@@ -12,5 +12,7 @@
         public string cargo { get; set; } = string.Empty;
         public byte id_area { get; set; }
         public bool? estado { get; set; }
+        public string user { get; set; } = string.Empty;
+        public string password { get; set; } = string.Empty;
     }
 }
