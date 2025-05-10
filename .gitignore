@@ -5,3 +5,11 @@ obj/
 *.suo
 bin/
 obj/
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.json
+*.csproj.user
